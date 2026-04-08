@@ -134,65 +134,13 @@ using OrbisNpWebApiInternalServicePushEventCallback = PS4_SYSV_ABI void (*)();  
 using OrbisNpWebApiInternalServicePushEventCallbackA = PS4_SYSV_ABI void (*)(); // dummy
 
 using OrbisNpWebApiNotificationCallback = PS4_SYSV_ABI void (*)(); // dummy
-s32 PS4_SYSV_ABI sceNpWebApiCreateContext();
-s32 PS4_SYSV_ABI sceNpWebApiCreatePushEventFilter();
-s32 PS4_SYSV_ABI sceNpWebApiCreateServicePushEventFilter();
-s32 PS4_SYSV_ABI sceNpWebApiDeletePushEventFilter();
-s32 PS4_SYSV_ABI sceNpWebApiDeleteServicePushEventFilter();
-s32 PS4_SYSV_ABI sceNpWebApiRegisterExtdPushEventCallback();
-s32 PS4_SYSV_ABI sceNpWebApiRegisterNotificationCallback();
-s32 PS4_SYSV_ABI sceNpWebApiRegisterPushEventCallback();
-s32 PS4_SYSV_ABI sceNpWebApiRegisterServicePushEventCallback();
-s32 PS4_SYSV_ABI sceNpWebApiUnregisterNotificationCallback();
-s32 PS4_SYSV_ABI sceNpWebApiUnregisterPushEventCallback();
-s32 PS4_SYSV_ABI sceNpWebApiUnregisterServicePushEventCallback();
-s32 PS4_SYSV_ABI sceNpWebApiAbortHandle();
-s32 PS4_SYSV_ABI sceNpWebApiAbortRequest();
-s32 PS4_SYSV_ABI sceNpWebApiAddHttpRequestHeader();
-s32 PS4_SYSV_ABI sceNpWebApiAddMultipartPart();
-s32 PS4_SYSV_ABI sceNpWebApiCheckTimeout();
-s32 PS4_SYSV_ABI sceNpWebApiClearAllUnusedConnection();
-s32 PS4_SYSV_ABI sceNpWebApiClearUnusedConnection();
-s32 PS4_SYSV_ABI sceNpWebApiCreateContextA();
-s32 PS4_SYSV_ABI sceNpWebApiCreateExtdPushEventFilter();
-s32 PS4_SYSV_ABI sceNpWebApiCreateHandle();
-s32 PS4_SYSV_ABI sceNpWebApiCreateMultipartRequest();
 s32 PS4_SYSV_ABI sceNpWebApiCreateRequest(s32 title_user_ctx_id, const char* p_api_group,
                                           const char* p_path, s32 method,
                                           SceNpWebApiContentParameter* p_content_parameter,
                                           s64* p_request_id);
-s32 PS4_SYSV_ABI sceNpWebApiDeleteContext();
-s32 PS4_SYSV_ABI sceNpWebApiDeleteExtdPushEventFilter();
-s32 PS4_SYSV_ABI sceNpWebApiDeleteHandle();
 s32 PS4_SYSV_ABI sceNpWebApiDeleteRequest(s64 request_id);
-s32 PS4_SYSV_ABI sceNpWebApiGetConnectionStats();
-s32 PS4_SYSV_ABI sceNpWebApiGetErrorCode();
-s32 PS4_SYSV_ABI sceNpWebApiGetHttpResponseHeaderValue();
-s32 PS4_SYSV_ABI sceNpWebApiGetHttpResponseHeaderValueLength();
 s32 PS4_SYSV_ABI sceNpWebApiGetHttpStatusCode(s64 request_id, s32* out_status_code);
-s32 PS4_SYSV_ABI sceNpWebApiGetMemoryPoolStats();
-s32 PS4_SYSV_ABI sceNpWebApiInitialize();
-s32 PS4_SYSV_ABI sceNpWebApiInitializeForPresence();
-s32 PS4_SYSV_ABI sceNpWebApiIntCreateCtxIndExtdPushEventFilter();
-s32 PS4_SYSV_ABI sceNpWebApiIntCreateRequest();
-s32 PS4_SYSV_ABI sceNpWebApiIntCreateServicePushEventFilter();
-s32 PS4_SYSV_ABI sceNpWebApiIntInitialize();
-s32 PS4_SYSV_ABI sceNpWebApiIntRegisterServicePushEventCallback();
-s32 PS4_SYSV_ABI sceNpWebApiIntRegisterServicePushEventCallbackA();
 s32 PS4_SYSV_ABI sceNpWebApiReadData(s64 request_id, char* data, u64 size);
-s32 PS4_SYSV_ABI sceNpWebApiRegisterExtdPushEventCallbackA();
-s32 PS4_SYSV_ABI sceNpWebApiSendMultipartRequest();
-s32 PS4_SYSV_ABI sceNpWebApiSendMultipartRequest2();
-s32 PS4_SYSV_ABI sceNpWebApiSendRequest();
-s32 PS4_SYSV_ABI sceNpWebApiSendRequest2();
-s32 PS4_SYSV_ABI sceNpWebApiSetHandleTimeout();
-s32 PS4_SYSV_ABI sceNpWebApiSetMaxConnection();
-s32 PS4_SYSV_ABI sceNpWebApiSetMultipartContentType();
-s32 PS4_SYSV_ABI sceNpWebApiSetRequestTimeout();
-s32 PS4_SYSV_ABI sceNpWebApiTerminate();
-s32 PS4_SYSV_ABI sceNpWebApiUnregisterExtdPushEventCallback();
-s32 PS4_SYSV_ABI sceNpWebApiUtilityParseNpId();
-s32 PS4_SYSV_ABI sceNpWebApiVshInitialize();
 s32 PS4_SYSV_ABI Func_064C4ED1EDBEB9E8();
 s32 PS4_SYSV_ABI Func_0783955D4E9563DA();
 s32 PS4_SYSV_ABI Func_1A6D77F3FD8323A8();

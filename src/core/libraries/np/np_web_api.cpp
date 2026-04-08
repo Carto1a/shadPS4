@@ -169,12 +169,13 @@ s32 PS4_SYSV_ABI sceNpWebApiAddMultipartPart(s64 requestId,
     return ORBIS_OK;
 }
 
-void PS4_SYSV_ABI sceNpWebApiCheckTimeout() {
+s32 PS4_SYSV_ABI sceNpWebApiCheckTimeout() {
     LOG_TRACE(Lib_NpWebApi, "called");
     if (!g_is_initialized) {
-        return;
+        return 0;
     }
-    return checkTimeout();
+    checkTimeout();
+    return 0;
 }
 
 s32 PS4_SYSV_ABI sceNpWebApiClearAllUnusedConnection(s32 userCtxId,
@@ -245,11 +246,6 @@ s32 PS4_SYSV_ABI sceNpWebApiCreateMultipartRequest(s32 titleUserCtxId, const cha
 
     return createRequest(titleUserCtxId, pApiGroup, pPath, method, nullptr, nullptr, pRequestId,
                          true);
-}
-
-s32 PS4_SYSV_ABI sceNpWebApiCreateMultipartRequest() {
-    LOG_ERROR(Lib_NpWebApi, "(STUBBED) called");
-    return ORBIS_OK;
 }
 
 s32 PS4_SYSV_ABI sceNpWebApiCreateRequest(s32 title_user_ctx_id, const char* p_api_group,
